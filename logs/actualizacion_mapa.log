@@ -1,0 +1,2491 @@
+
+============================================================
+Inicio actualizacion: 02/07/2026 12:03:08.22
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1755, in <module>
+    main()
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1603, in main
+    ruta_records = descargar_records_hoy() if USAR_RECORDS_AUTOMATICO else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 211, in descargar_records_hoy
+    print("\n" + "\u2550" * 60)
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 2-61: character maps to <undefined>
+ERROR: Fallo la ejecucion del Python.
+
+============================================================
+Inicio actualizacion: 02/07/2026 12:06:19.85
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_120622.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_120622.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_120622.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_120622.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            2      5          2       0
+3    REGION 13       11       51            1     10          1       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            1      3          1       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            1      5          1       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            3      3          3       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main d013c0e] Actualizacion automatica mapa 02/07/2026 12:06:25.06
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   b37b732..d013c0e  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 12:06:27.92
+
+============================================================
+Inicio actualizacion: 02/07/2026 12:08:00.65
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_120802.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_120802.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_120802.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_120802.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            2      5          2       0
+3    REGION 13       11       51            1     10          1       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            1      3          1       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            1      5          1       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            3      3          3       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 02/07/2026 12:08:05.24
+
+============================================================
+Inicio actualizacion: 02/07/2026 13:00:01.85
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_130005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_130005.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_130005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_130005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            2      5          2       0
+3    REGION 13       11       51            3      8          3       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            1      3          1       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            3      5          3       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            1     10          1       0
+10   REGION 21        6       29            1      5          1       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            2      6          2       0
+13    REGION 3        6       35            4      3          2       1
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            2      2          2       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            1     15          1       0
+22    REGION 9        5       16            1      4          1       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 78650f8] Actualizacion automatica mapa 02/07/2026 13:00:08.07
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   d013c0e..78650f8  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 13:00:12.20
+
+============================================================
+Inicio actualizacion: 02/07/2026 14:00:01.68
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+^C
+============================================================
+Inicio actualizacion: 02/07/2026 14:03:01.91
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_140305.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_140305.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_140305.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_140305.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30            5      4          1       2
+3    REGION 13       11       51            4      7          4       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            2      2          2       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            3      5          3       0
+8     REGION 2        6       18            1      5          1       0
+9    REGION 20       11       41            2      9          2       0
+10   REGION 21        6       29            1      5          1       0
+11   REGION 22       12       45            1     11          1       0
+12   REGION 23        8       43            6      4          2       2
+13    REGION 3        6       35            5      3          1       2
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            2      2          2       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            1      1          1       0
+21    REGION 8       16       52            3     13          3       0
+22    REGION 9        5       16            3      3          1       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 69ac4c2] Actualizacion automatica mapa 02/07/2026 14:03:09.36
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   78650f8..69ac4c2  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 14:03:12.63
+
+============================================================
+Inicio actualizacion: 02/07/2026 15:00:01.84
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_150005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_150005.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_150005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_150005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30            5      4          1       2
+3    REGION 13       11       51            5      6          5       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            2      2          2       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            3      5          3       0
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            2      9          2       0
+10   REGION 21        6       29            2      4          2       0
+11   REGION 22       12       45            4      8          4       0
+12   REGION 23        8       43            6      4          2       2
+13    REGION 3        6       35            5      3          1       2
+14  REGION 4.1        5       16            1      4          1       0
+15  REGION 4.2        4        6            2      2          2       0
+16  REGION 4.3        5       18            1      4          1       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            1      1          1       0
+21    REGION 8       16       52            3     13          3       0
+22    REGION 9        5       16            3      3          1       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 519cd48] Actualizacion automatica mapa 02/07/2026 15:00:09.74
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   69ac4c2..519cd48  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 15:00:13.12
+
+============================================================
+Inicio actualizacion: 02/07/2026 16:23:57.31
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+^C
+============================================================
+Inicio actualizacion: 02/07/2026 16:28:18.15
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_162821.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_162821.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_162821.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_162821.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30            6      3          2       2
+3    REGION 13       11       51            9      4          5       2
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            4      0          4       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            4      5          2       1
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            6      7          3       1
+10   REGION 21        6       29            4      3          2       1
+11   REGION 22       12       45            5      8          3       1
+12   REGION 23        8       43            7      3          3       2
+13    REGION 3        6       35            5      3          1       2
+14  REGION 4.1        5       16            1      4          1       0
+15  REGION 4.2        4        6            3      2          1       1
+16  REGION 4.3        5       18            1      4          1       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            1      1          1       0
+21    REGION 8       16       52            6     12          2       2
+22    REGION 9        5       16            3      3          1       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 2e30f23] Actualizacion automatica mapa 02/07/2026 16:28:25.42
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   519cd48..2e30f23  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 16:28:28.84
+
+============================================================
+Inicio actualizacion: 02/07/2026 16:31:34.19
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_163136.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_163136.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_163136.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_163136.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30            6      3          2       2
+3    REGION 13       11       51            9      4          5       2
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            5      0          3       1
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            4      5          2       1
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            6      7          3       1
+10   REGION 21        6       29            4      3          2       1
+11   REGION 22       12       45            5      8          3       1
+12   REGION 23        8       43            7      3          3       2
+13    REGION 3        6       35            5      3          1       2
+14  REGION 4.1        5       16            2      3          2       0
+15  REGION 4.2        4        6            3      2          1       1
+16  REGION 4.3        5       18            1      4          1       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            1      1          1       0
+21    REGION 8       16       52            6     12          2       2
+22    REGION 9        5       16            3      3          1       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 982c61b] Actualizacion automatica mapa 02/07/2026 16:31:42.47
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   2e30f23..982c61b  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 16:31:45.25
+
+============================================================
+Inicio actualizacion: 02/07/2026 17:00:01.86
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_170006.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_170006.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_170006.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_170006.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30            7      3          1       3
+3    REGION 13       11       51           10      3          6       2
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            5      0          3       1
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            4      5          2       1
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            7      7          2       2
+10   REGION 21        6       29            4      3          2       1
+11   REGION 22       12       45            7      6          5       1
+12   REGION 23        8       43            9      1          5       2
+13    REGION 3        6       35            6      3          1       2
+14  REGION 4.1        5       16            2      3          2       0
+15  REGION 4.2        4        6            3      2          1       1
+16  REGION 4.3        5       18            2      4          0       1
+17  REGION 4.4        4       11            1      3          1       0
+18  REGION 4.5        4       11            1      3          1       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            1      1          1       0
+21    REGION 8       16       52            7     11          3       2
+22    REGION 9        5       16            3      3          1       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 307cb62] Actualizacion automatica mapa 02/07/2026 17:00:10.43
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   982c61b..307cb62  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 17:00:13.60
+
+============================================================
+Inicio actualizacion: 02/07/2026 18:04:09.88
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_180413.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_180413.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_180413.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_180413.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30            9      3          1       3
+3    REGION 13       11       51           12      2          6       3
+4    REGION 14        1        6            1      0          1       0
+5    REGION 15        4       26            6      0          3       1
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            4      5          2       1
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            8      6          3       2
+10   REGION 21        6       29            5      3          2       1
+11   REGION 22       12       45            7      6          5       1
+12   REGION 23        8       43            9      1          5       2
+13    REGION 3        6       35            7      3          1       2
+14  REGION 4.1        5       16            2      3          2       0
+15  REGION 4.2        4        6            3      2          1       1
+16  REGION 4.3        5       18            2      4          0       1
+17  REGION 4.4        4       11            1      3          1       0
+18  REGION 4.5        4       11            2      2          2       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            1      1          1       0
+21    REGION 8       16       52            9     10          4       2
+22    REGION 9        5       16            5      2          2       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 8b634fc] Actualizacion automatica mapa 02/07/2026 18:04:19.61
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+fatal: unable to access 'https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git/': getaddrinfo() thread failed to start
+ERROR: Fallo git push.
+
+============================================================
+Inicio actualizacion: 02/07/2026 19:00:01.87
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_190005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_190005.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_190005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_190005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30           10      3          1       3
+3    REGION 13       11       51           17      2          2       7
+4    REGION 14        1        6            1      0          1       0
+5    REGION 15        4       26            6      0          3       1
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            7      5          0       3
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            8      6          3       2
+10   REGION 21        6       29            6      3          1       2
+11   REGION 22       12       45            7      6          5       1
+12   REGION 23        8       43            9      1          5       2
+13    REGION 3        6       35            8      2          2       2
+14  REGION 4.1        5       16            3      2          3       0
+15  REGION 4.2        4        6            3      2          1       1
+16  REGION 4.3        5       18            2      4          0       1
+17  REGION 4.4        4       11            1      3          1       0
+18  REGION 4.5        4       11            2      2          2       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            1      1          1       0
+21    REGION 8       16       52           10     10          4       2
+22    REGION 9        5       16            5      2          2       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 3db2104] Actualizacion automatica mapa 02/07/2026 19:00:09.73
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   307cb62..3db2104  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 19:00:12.98
+
+============================================================
+Inicio actualizacion: 02/07/2026 20:00:01.85
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_200005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_200005.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_200005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_200005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30           10      3          1       3
+3    REGION 13       11       51           19      2          2       7
+4    REGION 14        1        6            1      0          1       0
+5    REGION 15        4       26            7      0          2       2
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            8      5          0       3
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            9      6          3       2
+10   REGION 21        6       29            7      3          1       2
+11   REGION 22       12       45            8      6          5       1
+12   REGION 23        8       43            9      1          5       2
+13    REGION 3        6       35            8      2          2       2
+14  REGION 4.1        5       16            3      2          3       0
+15  REGION 4.2        4        6            4      1          2       1
+16  REGION 4.3        5       18            2      4          0       1
+17  REGION 4.4        4       11            1      3          1       0
+18  REGION 4.5        4       11            2      2          2       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            2      1          0       1
+21    REGION 8       16       52           10     10          4       2
+22    REGION 9        5       16            5      2          2       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 1eb7620] Actualizacion automatica mapa 02/07/2026 20:00:09.79
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   3db2104..1eb7620  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 20:00:12.83
+
+============================================================
+Inicio actualizacion: 02/07/2026 21:00:01.88
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_210005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_210005.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_210005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_210005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30           11      3          1       3
+3    REGION 13       11       51           19      2          2       7
+4    REGION 14        1        6            1      0          1       0
+5    REGION 15        4       26            7      0          2       2
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            8      5          0       3
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            9      6          3       2
+10   REGION 21        6       29            7      3          1       2
+11   REGION 22       12       45            9      6          5       1
+12   REGION 23        8       43            9      1          5       2
+13    REGION 3        6       35            9      2          2       2
+14  REGION 4.1        5       16            3      2          3       0
+15  REGION 4.2        4        6            4      1          2       1
+16  REGION 4.3        5       18            2      4          0       1
+17  REGION 4.4        4       11            1      3          1       0
+18  REGION 4.5        4       11            2      2          2       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            2      1          0       1
+21    REGION 8       16       52           11      9          5       2
+22    REGION 9        5       16            5      2          2       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 9ebeac5] Actualizacion automatica mapa 02/07/2026 21:00:10.24
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   1eb7620..9ebeac5  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 21:00:13.36
+
+============================================================
+Inicio actualizacion: 02/07/2026 22:00:01.80
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_220005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_220005.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_220005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_220005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30           11      3          1       3
+3    REGION 13       11       51           19      2          2       7
+4    REGION 14        1        6            1      0          1       0
+5    REGION 15        4       26            7      0          2       2
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            8      5          0       3
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            9      6          3       2
+10   REGION 21        6       29            7      3          1       2
+11   REGION 22       12       45           10      6          5       1
+12   REGION 23        8       43            9      1          5       2
+13    REGION 3        6       35            9      2          2       2
+14  REGION 4.1        5       16            3      2          3       0
+15  REGION 4.2        4        6            4      1          2       1
+16  REGION 4.3        5       18            2      4          0       1
+17  REGION 4.4        4       11            1      3          1       0
+18  REGION 4.5        4       11            2      2          2       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            2      1          0       1
+21    REGION 8       16       52           11      9          5       2
+22    REGION 9        5       16            5      2          2       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 427925e] Actualizacion automatica mapa 02/07/2026 22:00:09.31
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   9ebeac5..427925e  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 02/07/2026 22:00:12.29
+
+============================================================
+Inicio actualizacion: 02/07/2026 23:00:02.45
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260702_230005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_230005.xlsx
+📅 Fecha descargada: 02/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260702_230005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260702_230005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            1      2          1       0
+1   REGION 1.2        3       10            1      2          1       0
+2    REGION 11        7       30           11      3          1       3
+3    REGION 13       11       51           19      2          2       7
+4    REGION 14        1        6            1      0          1       0
+5    REGION 15        4       26            7      0          2       2
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            8      5          0       3
+8     REGION 2        6       18            2      4          2       0
+9    REGION 20       11       41            9      6          3       2
+10   REGION 21        6       29            7      3          1       2
+11   REGION 22       12       45           10      6          5       1
+12   REGION 23        8       43            9      1          5       2
+13    REGION 3        6       35            9      2          2       2
+14  REGION 4.1        5       16            3      2          3       0
+15  REGION 4.2        4        6            4      1          2       1
+16  REGION 4.3        5       18            2      4          0       1
+17  REGION 4.4        4       11            1      3          1       0
+18  REGION 4.5        4       11            2      2          2       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            2      1          0       1
+21    REGION 8       16       52           11      9          5       2
+22    REGION 9        5       16            5      2          2       1
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 02/07/2026 23:00:09.71
+
+============================================================
+Inicio actualizacion: 03/07/2026  0:00:01.82
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_000005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_000005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_000005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_000005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 9f2f71a] Actualizacion automatica mapa 03/07/2026  0:00:07.28
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   427925e..9f2f71a  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 03/07/2026  0:00:10.35
+
+============================================================
+Inicio actualizacion: 03/07/2026  1:00:01.86
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_010005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_010005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_010005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_010005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  1:00:07.35
+
+============================================================
+Inicio actualizacion: 03/07/2026  2:00:01.86
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_020005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_020005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_020005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_020005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  2:00:07.45
+
+============================================================
+Inicio actualizacion: 03/07/2026  3:00:01.87
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_030005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_030005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_030005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_030005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  3:00:07.39
+
+============================================================
+Inicio actualizacion: 03/07/2026  4:00:01.85
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_040005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_040005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_040005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_040005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  4:00:07.43
+
+============================================================
+Inicio actualizacion: 03/07/2026  5:00:01.89
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_050005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_050005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_050005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_050005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  5:00:07.27
+
+============================================================
+Inicio actualizacion: 03/07/2026  6:00:01.93
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11002] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='modulos.invex.maatai.com', port=443): Failed to resolve 'modulos.invex.maatai.com' ([Errno 11002] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='modulos.invex.maatai.com', port=443): Max retries exceeded with url: /admin/ (Caused by NameResolutionError("HTTPSConnection(host='modulos.invex.maatai.com', port=443): Failed to resolve 'modulos.invex.maatai.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1755, in <module>
+    main()
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1603, in main
+    ruta_records = descargar_records_hoy() if USAR_RECORDS_AUTOMATICO else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 234, in descargar_records_hoy
+    resp = session.get(ADMIN_URL, timeout=30)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='modulos.invex.maatai.com', port=443): Max retries exceeded with url: /admin/ (Caused by NameResolutionError("HTTPSConnection(host='modulos.invex.maatai.com', port=443): Failed to resolve 'modulos.invex.maatai.com' ([Errno 11002] getaddrinfo failed)"))
+ERROR: Fallo la ejecucion del Python.
+
+============================================================
+Inicio actualizacion: 03/07/2026  7:00:01.89
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_070005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_070005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_070005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_070005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  7:00:07.43
+
+============================================================
+Inicio actualizacion: 03/07/2026  8:00:01.91
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_080005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_080005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_080005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_080005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  8:00:07.10
+
+============================================================
+Inicio actualizacion: 03/07/2026  9:00:01.89
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_090005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_090005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_090005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_090005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            0     11          0       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            0      8          0       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+No hubo cambios nuevos en index.html. No se hizo commit.
+Fin sin cambios: 03/07/2026  9:00:07.01
+
+============================================================
+Inicio actualizacion: 03/07/2026 10:00:02.03
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_100005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_100005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_100005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_100005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            1     10          1       0
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            1      7          1       0
+13    REGION 3        6       35            0      6          0       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 5792eff] Actualizacion automatica mapa 03/07/2026 10:00:07.86
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   9f2f71a..5792eff  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 03/07/2026 10:00:11.35
+
+============================================================
+Inicio actualizacion: 03/07/2026 11:00:01.90
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_110005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_110005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_110005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_110005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        4       26            0      4          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       11       41            2     10          0       1
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            1      7          1       0
+13    REGION 3        6       35            1      5          1       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            0     16          0       0
+22    REGION 9        5       16            0      5          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 013540e] Actualizacion automatica mapa 03/07/2026 11:00:07.61
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   5792eff..013540e  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 03/07/2026 11:00:10.62
+
+============================================================
+Inicio actualizacion: 03/07/2026 11:28:53.32
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_112857.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_112857.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_112857.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_112857.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Tiendas OPERANDO detectadas en base: 139
+Buscando coordenadas de 3 tiendas...
+Prioridad: DIRECCION TIENDA. Si no encuentra, usa ubicacion aproximada por tienda/ciudad/estado.
+La primera vez puede tardar unos minutos.
+Coordenadas encontradas: 139
+ - Por DIRECCION TIENDA: 17
+ - Aproximadas: 122
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        5       26            0      5          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       12       44            2     11          0       1
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            1      7          1       0
+13    REGION 3        7       36            1      6          1       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       16       52            1     15          1       0
+22    REGION 9        5       16            0      5          0       0
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1878, in <module>
+    main()
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1857, in main
+    crear_html_mapa(data_tiendas, salida_html, ultima_actualizacion=ultima_actualizacion)
+TypeError: crear_html_mapa() got an unexpected keyword argument 'ultima_actualizacion'
+ERROR: Fallo la ejecucion del Python.
+
+============================================================
+Inicio actualizacion: 03/07/2026 11:31:57.50
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_113159.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_113159.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_113159.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_113159.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Tiendas OPERANDO detectadas en base: 142
+Buscando coordenadas de 5 tiendas...
+Prioridad: DIRECCION TIENDA. Si no encuentra, usa ubicacion aproximada por tienda/ciudad/estado.
+La primera vez puede tardar unos minutos.
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1878, in <module>
+    main()
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1811, in main
+    resumen = geocodificar_tiendas(resumen)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 664, in geocodificar_tiendas
+    guardar_cache_coords(cache)
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 470, in guardar_cache_coords
+    cache.to_excel(ARCHIVO_CACHE_COORDS, index=False)
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 2312, in to_excel
+    formatter.write(
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\formats\excel.py", line 1003, in write
+    writer = ExcelWriter(
+             ^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 204, in __init__
+    super().__init__(
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\excel\_base.py", line 1281, in __init__
+    self._handles = get_handle(
+                    ^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\common.py", line 939, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\analista.wallmart\\Documents\\TIENDAS-EN-FOCO-ROJO\\cache_coordenadas_tiendas_v3_validado.xlsx'
+ERROR: Fallo la ejecucion del Python.
+
+============================================================
+Inicio actualizacion: 03/07/2026 11:33:13.83
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_113316.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_113316.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_113316.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_113316.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Tiendas OPERANDO detectadas en base: 142
+Buscando coordenadas de 5 tiendas...
+Prioridad: DIRECCION TIENDA. Si no encuentra, usa ubicacion aproximada por tienda/ciudad/estado.
+La primera vez puede tardar unos minutos.
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1878, in <module>
+    main()
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1811, in main
+    resumen = geocodificar_tiendas(resumen)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 664, in geocodificar_tiendas
+    guardar_cache_coords(cache)
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 470, in guardar_cache_coords
+    cache.to_excel(ARCHIVO_CACHE_COORDS, index=False)
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 2312, in to_excel
+    formatter.write(
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\formats\excel.py", line 1003, in write
+    writer = ExcelWriter(
+             ^^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 204, in __init__
+    super().__init__(
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\excel\_base.py", line 1281, in __init__
+    self._handles = get_handle(
+                    ^^^^^^^^^^^
+  File "C:\Users\analista.wallmart\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\common.py", line 939, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\analista.wallmart\\Documents\\TIENDAS-EN-FOCO-ROJO\\cache_coordenadas_tiendas_v3_validado.xlsx'
+ERROR: Fallo la ejecucion del Python.
+
+============================================================
+Inicio actualizacion: 03/07/2026 11:35:25.00
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_113528.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_113528.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_113528.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_113528.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Tiendas OPERANDO detectadas en base: 142
+Buscando coordenadas de 142 tiendas...
+Prioridad: DIRECCION TIENDA. Si no encuentra, usa ubicacion aproximada por tienda/ciudad/estado.
+La primera vez puede tardar unos minutos.
+Coordenadas encontradas: 142
+ - Por DIRECCION TIENDA: 17
+ - Aproximadas: 125
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            0      7          0       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        5       26            0      5          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       12       38            2     11          0       1
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            1      7          1       0
+13    REGION 3        7       36            1      6          1       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       18       52            1     17          1       0
+22    REGION 9        6       16            0      6          0       0
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1878, in <module>
+    main()
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1857, in main
+    crear_html_mapa(data_tiendas, salida_html, ultima_actualizacion=ultima_actualizacion)
+TypeError: crear_html_mapa() got an unexpected keyword argument 'ultima_actualizacion'
+ERROR: Fallo la ejecucion del Python.
+
+============================================================
+Inicio actualizacion: 03/07/2026 11:43:00.55
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_114303.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_114303.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_114303.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_114303.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Tiendas OPERANDO detectadas en base: 142
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            1      6          1       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        5       26            0      5          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       12       38            2     11          0       1
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            1      7          1       0
+13    REGION 3        7       36            1      6          1       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       18       52            1     17          1       0
+22    REGION 9        6       16            0      6          0       0
+Traceback (most recent call last):
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1878, in <module>
+    main()
+  File "C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\mapa_invex_github_auto.py", line 1857, in main
+    crear_html_mapa(data_tiendas, salida_html, ultima_actualizacion=ultima_actualizacion)
+TypeError: crear_html_mapa() got an unexpected keyword argument 'ultima_actualizacion'
+ERROR: Fallo la ejecucion del Python.
+
+============================================================
+Inicio actualizacion: 03/07/2026 11:45:52.90
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_114555.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_114555.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_114555.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_114555.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Tiendas OPERANDO detectadas en base: 142
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            1      6          1       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        5       26            0      5          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       12       38            2     11          0       1
+10   REGION 21        6       29            0      6          0       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            1      7          1       0
+13    REGION 3        7       36            1      6          1       0
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       18       52            1     17          1       0
+22    REGION 9        6       16            0      6          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main ae33385] Actualizacion automatica mapa 03/07/2026 11:45:57.56
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 71 insertions(+), 13 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   013540e..ae33385  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 03/07/2026 11:46:00.28
+
+============================================================
+Inicio actualizacion: 03/07/2026 12:00:01.72
+============================================================
+Ejecutando mapa_invex_github_auto.py...
+
+════════════════════════════════════════════════════════════
+     📥 DESCARGA AUTOMATICA DE RECORDS DEL DIA
+════════════════════════════════════════════════════════════
+
+
+[1/3] 🔐 Iniciando sesión...
+✅ Login OK
+
+[2/3] 📄 Solicitando Records de hoy...
+✅ Records descargado: Records_HOY_20260703_120005.xlsx
+📁 Guardado en: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_120005.xlsx
+📅 Fecha descargada: 03/07/2026
+
+[3/3] ✅ Records listo para actualizar el mapa
+
+
+Archivos detectados:
+Records:    C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\records_local\Records_HOY_20260703_120005.xlsx
+Asistencia: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\ASISTENCIA.xlsx
+Base:       C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\data\BASE_DE_TIENDAS.xlsx
+Hoja usada en Records_HOY_20260703_120005.xlsx: Sheet
+Hoja usada en ASISTENCIA.xlsx: Hoja1
+Hoja usada en BASE_DE_TIENDAS.xlsx: BASE DE TIENDAS INVEX
+
+Columnas detectadas correctamente.
+Tiendas OPERANDO detectadas en base: 142
+Todas las tiendas ya tienen coordenadas en cache.
+
+Resumen por region:
+      REGION_N  TIENDAS  ACTIVOS  FINALIZADOS  ROJAS  AMARILLAS  VERDES
+0   REGION 1.1        3       17            0      3          0       0
+1   REGION 1.2        3       10            0      3          0       0
+2    REGION 11        7       30            1      6          1       0
+3    REGION 13       11       51            0     11          0       0
+4    REGION 14        1        6            0      1          0       0
+5    REGION 15        5       26            0      5          0       0
+6    REGION 16        1        2            0      1          0       0
+7    REGION 19        8       38            0      8          0       0
+8     REGION 2        6       18            0      6          0       0
+9    REGION 20       12       38            2     11          0       1
+10   REGION 21        6       29            1      5          1       0
+11   REGION 22       12       45            0     12          0       0
+12   REGION 23        8       43            1      7          1       0
+13    REGION 3        7       36            3      5          1       1
+14  REGION 4.1        5       16            0      5          0       0
+15  REGION 4.2        4        6            0      4          0       0
+16  REGION 4.3        5       18            0      5          0       0
+17  REGION 4.4        4       11            0      4          0       0
+18  REGION 4.5        4       11            0      4          0       0
+19  REGION 4.6        4        7            0      4          0       0
+20  REGION 4.7        2        1            0      2          0       0
+21    REGION 8       18       52            1     17          1       0
+22    REGION 9        6       16            0      6          0       0
+
+Listo! Archivos generados:
+HTML : C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\index.html
+Excel: C:\Users\analista.wallmart\Documents\TIENDAS-EN-FOCO-ROJO\salida_local\resumen_mapa_invex.xlsx
+Archivos guardados en la carpeta actual.
+        1 archivo(s) copiado(s).
+[main 0ca1bff] Actualizacion automatica mapa 03/07/2026 12:00:07.66
+ Committer: MARIELA SANCHEZ CABALLERO <analista.wallmart@B.just>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+To https://github.com/JUSTBETTER-CREATOR/MAPA-TIENDAS-FOCO-ROJO.git
+   ae33385..0ca1bff  main -> main
+Mapa actualizado y publicado correctamente.
+Fin actualizacion: 03/07/2026 12:00:10.89
