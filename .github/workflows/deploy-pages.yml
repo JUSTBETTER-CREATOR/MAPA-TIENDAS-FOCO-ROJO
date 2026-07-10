@@ -1,0 +1,135 @@
+name: Deploy mapa a GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repo
+        uses: actions/checkout@v4
+
+      - name: Preparar mapa con URL dinamica
+        shell: bash
+        run: |
+          set -e
+          rm -rf public
+          mkdir -p public
+
+          TOKEN="${{ secrets.MAPA_TOKEN }}"
+
+          if [ -z "$TOKEN" ]; then
+            echo "::error::Falta configurar el secret MAPA_TOKEN."
+            exit 1
+          fi
+
+          TOKEN_CLEAN="$(echo "$TOKEN" | tr -cd 'A-Za-z0-9._-')"
+
+          if [ -z "$TOKEN_CLEAN" ]; then
+            echo "::error::El token quedo vacio despues de limpiarlo."
+            exit 1
+          fi
+
+          if [ ! -f "index.html" ]; then
+            echo "::error::No existe index.html. Primero genera el mapa."
+            exit 1
+          fi
+
+          cat > public/index.html <<'EOF'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="robots" content="noindex, nofollow, noarchive">
+            <title>404 Not Found</title>
+            <style>
+              body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#222;margin:0;display:flex;align-items:center;justify-content:center;min-height:100vh}
+              main{width:min(680px,92vw);padding:32px}
+              h1{font-size:72px;line-height:1;margin:0 0 8px}
+              h2{font-size:24px;margin:0 0 18px;font-weight:500}
+              p{font-size:16px;line-height:1.5;color:#555}
+              hr{border:0;border-top:1px solid #ddd;margin:24px 0}
+            </style>
+          </head>
+          <body>
+            <main>
+              <h1>404</h1>
+              <h2>Not Found</h2>
+              <hr>
+              <p>The requested URL was not found on this server.</p>
+            </main>
+          </body>
+          </html>
+          EOF
+
+          cp public/index.html public/404.html
+
+          cat > public/robots.txt <<'EOF'
+          User-agent: *
+          Disallow: /
+          EOF
+
+          touch public/.nojekyll
+          mkdir -p "public/m/$TOKEN_CLEAN"
+          cp index.html "public/m/$TOKEN_CLEAN/index.html"
+
+          export TOKEN_CLEAN
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          import re
+
+          token = os.environ["TOKEN_CLEAN"]
+          p = Path("public") / "m" / token / "index.html"
+          html = p.read_text(encoding="utf-8", errors="ignore")
+
+          meta = '<meta name="robots" content="noindex, nofollow, noarchive">'
+          no_cache = '''
+          <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+          <meta http-equiv="Pragma" content="no-cache">
+          <meta http-equiv="Expires" content="0">
+          '''
+
+          if 'name="robots"' not in html.lower():
+              html = re.sub(r"</head>", meta + no_cache + "\n</head>", html, count=1, flags=re.I)
+
+          p.write_text(html, encoding="utf-8")
+          PY
+
+          echo "Mapa preparado en public/m/<TOKEN>/index.html"
+          echo "Raiz y URLs vencidas mostraran 404 clasico."
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir mapa
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./public"
+
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000
+          error_count: 60
+          reporting_interval: 10000

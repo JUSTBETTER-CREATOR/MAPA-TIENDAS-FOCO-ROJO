@@ -1,4 +1,22 @@
+# Datos internos: NO subir a GitHub
+data/
+records_local/
+salida_local/
 logs/
+backups/
+
+# Cache local
+cache_coordenadas_tiendas_v3_validado.xlsx
+
+# Credenciales
+.env
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporales
+*.tmp
 *.log
-actualizar_mapa_y_publicar.bat
-actualizar_mapa_y_publicar_CORREGIDO.bat
