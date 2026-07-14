@@ -642,7 +642,7 @@
             </select>
         </div>
 
-        <div class="update-box">🕒 Última actualización: 14/07/2026 13:18</div>
+        <div class="update-box">🕒 Última actualización: 14/07/2026 13:23</div>
 
         <div class="summary-grid">
             <div class="summary-card rojo">
@@ -680,9 +680,9 @@
             </div>
             <div class="progress-track">
                 <div id="metricProgressFill" class="progress-fill"></div>
-                <div class="progress-target" title="Meta 80%"></div>
+                <div class="progress-target" title="Meta"></div>
             </div>
-            <div id="metricProgressDetail" class="metric-progress-detail">Meta: 80%</div>
+            <div id="metricProgressDetail" class="metric-progress-detail">Meta</div>
         </div>
 
         <div class="help-box">
@@ -769,6 +769,12 @@ function metricNombre() {
     return "TRAMITES";
 }
 
+function metaMetrica() {
+    if (metricaActiva === "PROGRAMA0") return 30;
+    if (metricaActiva === "AHORRA") return 80;
+    return 0;
+}
+
 function valorMetrica(t) {
     if (metricaActiva === "PROGRAMA0") return Number(t.programa0 || 0);
     if (metricaActiva === "AHORRA") return Number(t.ahorraMas || 0);
@@ -818,11 +824,20 @@ function actualizarProgresoMetrica() {
     const pct = totalFinalizados > 0 ? (totalAceptados / totalFinalizados) * 100 : 0;
     const pctBar = Math.max(0, Math.min(100, pct));
 
-    document.getElementById("metricProgressTitle").textContent = metricNombre() + " | Meta 80%";
+    const meta = metaMetrica();
+
+    document.getElementById("metricProgressTitle").textContent = metricNombre() + " | Meta " + meta + "%";
     document.getElementById("metricProgressPct").textContent = pct.toFixed(1) + "%";
     document.getElementById("metricProgressFill").style.width = pctBar + "%";
+
+    const target = document.querySelector(".progress-target");
+    if (target) {
+        target.style.left = meta + "%";
+        target.title = "Meta " + meta + "%";
+    }
+
     document.getElementById("metricProgressDetail").innerHTML =
-        `<b>${totalAceptados}</b> tramites con ${metricNombre()} aceptado / <b>${totalFinalizados}</b> tramites finalizados. Faltan ${Math.max(0, 80 - pct).toFixed(1)} pts para la meta.`;
+        `<b>${totalAceptados}</b> tramites con ${metricNombre()} aceptado / <b>${totalFinalizados}</b> tramites finalizados. Faltan ${Math.max(0, meta - pct).toFixed(1)} pts para la meta.`;
     box.classList.remove("hidden");
 }
 
