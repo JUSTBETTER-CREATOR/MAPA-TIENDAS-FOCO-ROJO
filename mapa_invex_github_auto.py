@@ -188,6 +188,155 @@ def extraer_determinante_mostrar(valor):
     candidatos = [g for g in grupos if 2 <= len(g) <= 5]
     return candidatos[0] if candidatos else grupos[0]
 
+
+# ============================================================
+# LLAVES ESPECIALES PARA TIENDAS SIN DETERMINANTE NUMERICA
+# ============================================================
+
+NOMBRES_TIENDAS_ESPECIALES = {
+    "IKEA_OCEANIA": "IKEA OCEANIA",
+    "IKEA_PUEBLA": "IKEA PUEBLA",
+}
+
+def extraer_llave_tienda_especial(valor):
+    """
+    Regresa una llave interna para tiendas que no traen determinante numérica.
+
+    Caso necesario para IKEA:
+    - En BASE DE TIENDAS puede venir como IKEA / IKEA OCEANIA / IKEA PUEBLA.
+    - En Records puede venir como MODULO IKEA OCEANIA MAAT 2.
+    - En Records puede venir como MODULO IKEA PUEBLA MAAT 2.0.
+    """
+    texto = limpiar_texto(valor)
+    if not texto:
+        return ""
+
+    if "IKEA" in texto and "OCEANIA" in texto:
+        return "IKEA_OCEANIA"
+
+    if "IKEA" in texto and "PUEBLA" in texto:
+        return "IKEA_PUEBLA"
+
+    return ""
+
+def extraer_determinante_o_tienda(valor):
+    """Primero intenta sacar determinante numérica; si no puede, intenta llave especial."""
+    det = extraer_determinante(valor)
+    if det:
+        return det
+    return extraer_llave_tienda_especial(valor)
+
+def juntar_valores_fila(row, columnas=None):
+    """Une valores de una fila para buscar palabras clave cuando una columna no basta."""
+    valores = []
+    if columnas:
+        iterable = [row.get(c, "") for c in columnas if c]
+    else:
+        iterable = list(row.values)
+
+    for valor in iterable:
+        if pd.isna(valor):
+            continue
+        texto = limpiar_texto_mostrar(valor)
+        if texto:
+            valores.append(texto)
+    return " | ".join(valores)
+
+def obtener_det_base(row, col_det_base=None, col_tienda_base=None):
+    """
+    Obtiene la llave para BASE DE TIENDAS.
+    Si la determinante no es numérica, usa el nombre de tienda/fila completa.
+    Esto permite que IKEA OCEANIA e IKEA PUEBLA entren aunque el campo determinante diga IKEA.
+    """
+    for col in [col_det_base, col_tienda_base]:
+        if not col:
+            continue
+        llave = extraer_determinante_o_tienda(row.get(col, ""))
+        if llave:
+            return llave
+
+    # Fallback: busca en toda la fila por si IKEA OCEANIA/PUEBLA está en otra columna.
+    return extraer_llave_tienda_especial(juntar_valores_fila(row))
+
+def obtener_det_records(row, col_segundo_lugar=None, col_lugar_venta=None, col_det_records=None):
+    """
+    Obtiene la llave para Records.
+    Prioridad:
+      1) Segundo lugar de venta, si trae determinante válida.
+      2) Lugar de venta, útil para IKEA cuando Segundo lugar de venta viene como '-'.
+      3) Determinante, si existiera.
+      4) Fila completa como fallback para tiendas especiales.
+    """
+    valores_vacios = {"", "-", "N/A", "NA", "NONE", "NAN", "SIN DATO", "SIN INFORMACION", "SIN INFORMACIÓN"}
+
+    for col in [col_segundo_lugar, col_lugar_venta, col_det_records]:
+        if not col:
+            continue
+        valor = row.get(col, "")
+        texto = limpiar_texto(valor)
+        if texto in valores_vacios:
+            continue
+        llave = extraer_determinante_o_tienda(valor)
+        if llave:
+            return llave
+
+    return extraer_llave_tienda_especial(juntar_valores_fila(row))
+
+def nombre_det_mostrar(det):
+    """Nombre amable para mostrar determinantes especiales en el mapa/Excel."""
+    return NOMBRES_TIENDAS_ESPECIALES.get(str(det), str(det))
+
+def es_aceptado(valor):
+    """Detecta valores ACEPTADO de Records para Programa 0 / Ahorra Más."""
+    return limpiar_texto(valor) == "ACEPTADO"
+
+def color_termometro_especial(cantidad):
+    """Termómetro para Programa 0 / Ahorra Más: negro 0, amarillo 1, verde 2+."""
+    try:
+        cantidad = int(cantidad)
+    except Exception:
+        cantidad = 0
+    if cantidad <= 0:
+        return "#111827"
+    if cantidad == 1:
+        return "#FACC15"
+    return "#16A34A"
+
+def semaforo_termometro_especial(cantidad):
+    try:
+        cantidad = int(cantidad)
+    except Exception:
+        cantidad = 0
+    if cantidad <= 0:
+        return "ROJO"  # internamente usa ROJO para el filtro; visualmente se pinta negro.
+    if cantidad == 1:
+        return "AMARILLO"
+    return "VERDE"
+
+def texto_termometro_especial(nombre, cantidad):
+    try:
+        cantidad = int(cantidad)
+    except Exception:
+        cantidad = 0
+    if cantidad <= 0:
+        return f"{nombre}: sin aceptados"
+    if cantidad == 1:
+        return f"{nombre}: 1 aceptado"
+    return f"{nombre}: {cantidad} aceptados"
+
+def contar_aceptados_por_tienda(records_finalizados, col_aceptado, col_folio_records, nombre_salida):
+    """Cuenta folios finalizados con ACEPTADO por tienda para una columna de Records."""
+    if not col_aceptado or col_aceptado not in records_finalizados.columns:
+        return pd.DataFrame(columns=["DET", nombre_salida])
+
+    tmp = records_finalizados[records_finalizados[col_aceptado].apply(es_aceptado)].copy()
+    if tmp.empty:
+        return pd.DataFrame(columns=["DET", nombre_salida])
+
+    if col_folio_records and col_folio_records in tmp.columns:
+        return tmp.groupby("DET")[col_folio_records].nunique().reset_index(name=nombre_salida)
+    return tmp.groupby("DET").size().reset_index(name=nombre_salida)
+
 def normalizar_columna(col):
     return limpiar_texto(col).replace("\n", " ").strip()
 
@@ -977,6 +1126,93 @@ def crear_html_mapa(data_tiendas, salida_html, ultima_actualizacion=None):
         color: white;
         border-color: #111827;
     }}
+
+    .metric-row {{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6px;
+        margin-bottom: 10px;
+    }}
+    .btn-metric {{
+        border-radius: 14px;
+        padding: 10px 6px;
+        font-size: 11px;
+        font-weight: 900;
+        background: #F8FAFC;
+        color: #334155;
+        border: 2px solid #E2E8F0;
+        box-shadow: none;
+    }}
+    .btn-metric.active {{
+        background: #1E40AF;
+        color: white;
+        border-color: #1E40AF;
+    }}
+    .metric-progress {{
+        background: #F8FAFC;
+        border: 1px solid #CBD5E1;
+        border-radius: 16px;
+        padding: 11px 12px;
+        margin-bottom: 10px;
+    }}
+    .metric-progress.hidden {{ display: none; }}
+    .metric-progress-title {{
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 900;
+        color: #111827;
+        margin-bottom: 8px;
+    }}
+    .progress-track {{
+        width: 100%;
+        height: 14px;
+        border-radius: 999px;
+        background: #E5E7EB;
+        overflow: hidden;
+        position: relative;
+    }}
+    .progress-fill {{
+        height: 100%;
+        border-radius: 999px;
+        background: #16A34A;
+        width: 0%;
+        transition: width .2s ease;
+    }}
+    .progress-target {{
+        position: absolute;
+        left: 80%;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #111827;
+        opacity: .85;
+    }}
+    .metric-progress-detail {{
+        margin-top: 7px;
+        font-size: 11px;
+        color: #475569;
+        font-weight: 700;
+        line-height: 1.35;
+    }}
+    .pill.metric-active {{
+        background: #DBEAFE;
+        color: #1E40AF;
+        border: 1px solid #93C5FD;
+    }}
+    .pill.black {{
+        background: #111827;
+        color: white;
+    }}
+    .pill.yellow {{
+        background: #FACC15;
+        color: #111827;
+    }}
+    .pill.green {{
+        background: #16A34A;
+        color: white;
+    }}
     .update-box {{
         background: #FDF2F8;
         border: 1px solid #FBCFE8;
@@ -1271,29 +1507,49 @@ def crear_html_mapa(data_tiendas, salida_html, ultima_actualizacion=None):
 
         <div class="summary-grid">
             <div class="summary-card rojo">
-                <span class="big">{total_rojas}</span>
-                <span class="small">Necesitan apoyo</span>
+                <span class="big" id="summaryRojo">{total_rojas}</span>
+                <span class="small" id="summaryRojoLabel">Necesitan apoyo</span>
             </div>
             <div class="summary-card amarillo">
-                <span class="big">{total_amarillas}</span>
-                <span class="small">Empezando</span>
+                <span class="big" id="summaryAmarillo">{total_amarillas}</span>
+                <span class="small" id="summaryAmarilloLabel">Empezando</span>
             </div>
             <div class="summary-card verde">
-                <span class="big">{total_verdes}</span>
-                <span class="small">Van bien</span>
+                <span class="big" id="summaryVerde">{total_verdes}</span>
+                <span class="small" id="summaryVerdeLabel">Van bien</span>
             </div>
         </div>
 
         <div class="filter-row">
             <button class="btn-filter active" data-filtro="TODOS" onclick="setFiltroSemaforo('TODOS')">TODAS</button>
-            <button class="btn-filter" data-filtro="ROJO" onclick="setFiltroSemaforo('ROJO')">ROJAS</button>
+            <button class="btn-filter" data-filtro="ROJO" onclick="setFiltroSemaforo('ROJO')" id="btnFiltroRojo">ROJAS</button>
             <button class="btn-filter" data-filtro="AMARILLO" onclick="setFiltroSemaforo('AMARILLO')">AMARILLAS</button>
             <button class="btn-filter" data-filtro="VERDE" onclick="setFiltroSemaforo('VERDE')">VERDES</button>
+        </div>
+
+        <label>Ver indicador</label>
+        <div class="metric-row">
+            <button class="btn-metric active" data-metrica="TRAMITES" onclick="setMetrica('TRAMITES')">TRAMITES</button>
+            <button class="btn-metric" data-metrica="PROGRAMA0" onclick="setMetrica('PROGRAMA0')">PROGRAMA 0</button>
+            <button class="btn-metric" data-metrica="AHORRA" onclick="setMetrica('AHORRA')">AHORRA MAS</button>
+        </div>
+
+        <div id="metricProgressBox" class="metric-progress hidden">
+            <div class="metric-progress-title">
+                <span id="metricProgressTitle">PROGRAMA 0</span>
+                <span id="metricProgressPct">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="metricProgressFill" class="progress-fill"></div>
+                <div class="progress-target" title="Meta 80%"></div>
+            </div>
+            <div id="metricProgressDetail" class="metric-progress-detail">Meta: 80%</div>
         </div>
 
         <div class="help-box">
             <b>Como leer el mapa:</b><br>
             El <b>circulo de colores</b> dice como va la tienda.<br>
+            En <b>PROGRAMA 0</b> y <b>AHORRA MAS</b>: negro = 0, amarillo = 1, verde = 2+ aceptados.<br>
             El <b>borde</b> dice a que zona pertenece.<br>
             Si no encuentra la direccion exacta, la ubicacion queda como <b>aproximada</b>.
         </div>
@@ -1331,6 +1587,17 @@ def crear_html_mapa(data_tiendas, salida_html, ultima_actualizacion=None):
             </div>
         </div>
 
+        <div class="big-number-row">
+            <div class="big-number">
+                <b id="infoPrograma0">-</b>
+                <span>Programa 0</span>
+            </div>
+            <div class="big-number">
+                <b id="infoAhorraMas">-</b>
+                <span>Ahorra Mas</span>
+            </div>
+        </div>
+
         <div id="infoStatus" class="status-box rojo">
             Toca una tienda para ver
         </div>
@@ -1350,10 +1617,105 @@ L.tileLayer("https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png", {{
 let markersLayer = L.layerGroup().addTo(map);
 let markerByDet = {{}};
 let filtroSemaforo = "TODOS";
+let metricaActiva = "TRAMITES";
 
 function esc(texto) {{
     if (texto === null || texto === undefined) return "";
     return String(texto).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+}}
+
+function metricNombre() {{
+    if (metricaActiva === "PROGRAMA0") return "PROGRAMA 0";
+    if (metricaActiva === "AHORRA") return "AHORRA MAS";
+    return "TRAMITES";
+}}
+
+function valorMetrica(t) {{
+    if (metricaActiva === "PROGRAMA0") return Number(t.programa0 || 0);
+    if (metricaActiva === "AHORRA") return Number(t.ahorraMas || 0);
+    return Number(t.finalizados || 0);
+}}
+
+function colorMetrica(t) {{
+    const v = valorMetrica(t);
+    if (metricaActiva === "TRAMITES") return t.colorSemaforo;
+    if (v <= 0) return "#111827";
+    if (v === 1) return "#FACC15";
+    return "#16A34A";
+}}
+
+function semaforoMetrica(t) {{
+    const v = valorMetrica(t);
+    if (metricaActiva === "TRAMITES") return t.semaforoCorto;
+    if (v <= 0) return "ROJO";
+    if (v === 1) return "AMARILLO";
+    return "VERDE";
+}}
+
+function textoSemaforoMetrica(t) {{
+    const v = valorMetrica(t);
+    if (metricaActiva === "TRAMITES") return t.semaforo;
+    if (v <= 0) return metricNombre() + ": sin aceptados";
+    if (v === 1) return metricNombre() + ": 1 aceptado";
+    return metricNombre() + ": " + v + " aceptados";
+}}
+
+function clasePillMetric(v) {{
+    v = Number(v || 0);
+    if (v <= 0) return "black";
+    if (v === 1) return "yellow";
+    return "green";
+}}
+
+function actualizarProgresoMetrica() {{
+    const box = document.getElementById("metricProgressBox");
+    if (metricaActiva === "TRAMITES") {{
+        box.classList.add("hidden");
+        return;
+    }}
+
+    const totalFinalizados = tiendas.reduce((acc, t) => acc + Number(t.finalizados || 0), 0);
+    const totalAceptados = tiendas.reduce((acc, t) => acc + (metricaActiva === "PROGRAMA0" ? Number(t.programa0 || 0) : Number(t.ahorraMas || 0)), 0);
+    const pct = totalFinalizados > 0 ? (totalAceptados / totalFinalizados) * 100 : 0;
+    const pctBar = Math.max(0, Math.min(100, pct));
+
+    document.getElementById("metricProgressTitle").textContent = metricNombre() + " | Meta 80%";
+    document.getElementById("metricProgressPct").textContent = pct.toFixed(1) + "%";
+    document.getElementById("metricProgressFill").style.width = pctBar + "%";
+    document.getElementById("metricProgressDetail").innerHTML =
+        `<b>${{totalAceptados}}</b> tramites con ${{metricNombre()}} aceptado / <b>${{totalFinalizados}}</b> tramites finalizados. Faltan ${{Math.max(0, 80 - pct).toFixed(1)}} pts para la meta.`;
+    box.classList.remove("hidden");
+}}
+
+function actualizarResumenMetrica(baseLista) {{
+    const lista = baseLista || tiendas;
+    const negros = lista.filter(t => valorMetrica(t) <= 0).length;
+    const amarillos = lista.filter(t => valorMetrica(t) === 1).length;
+    const verdes = lista.filter(t => valorMetrica(t) >= 2).length;
+
+    document.getElementById("summaryRojo").textContent = negros;
+    document.getElementById("summaryAmarillo").textContent = amarillos;
+    document.getElementById("summaryVerde").textContent = verdes;
+
+    if (metricaActiva === "TRAMITES") {{
+        document.getElementById("summaryRojoLabel").textContent = "Necesitan apoyo";
+        document.getElementById("summaryAmarilloLabel").textContent = "Empezando";
+        document.getElementById("summaryVerdeLabel").textContent = "Van bien";
+        document.getElementById("btnFiltroRojo").textContent = "ROJAS";
+    }} else {{
+        document.getElementById("summaryRojoLabel").textContent = "Sin aceptados";
+        document.getElementById("summaryAmarilloLabel").textContent = "1 aceptado";
+        document.getElementById("summaryVerdeLabel").textContent = "2+ aceptados";
+        document.getElementById("btnFiltroRojo").textContent = "NEGRAS";
+    }}
+}}
+
+function setMetrica(valor) {{
+    metricaActiva = valor;
+    document.querySelectorAll(".btn-metric").forEach(btn => {{
+        btn.classList.toggle("active", btn.getAttribute("data-metrica") === valor);
+    }});
+    aplicarFiltros();
 }}
 
 /* ===== MOSTRAR / OCULTAR PANEL ===== */
@@ -1407,12 +1769,15 @@ function mostrarInfo(t) {{
 
     document.getElementById("infoActivos").textContent = t.activos;
     document.getElementById("infoFinalizados").textContent = t.finalizados;
+    document.getElementById("infoPrograma0").textContent = t.programa0 || 0;
+    document.getElementById("infoAhorraMas").textContent = t.ahorraMas || 0;
 
     const st = document.getElementById("infoStatus");
-    st.textContent = t.mensaje;
+    st.textContent = metricaActiva === "TRAMITES" ? t.mensaje : textoSemaforoMetrica(t);
     st.className = "status-box";
-    if (t.finalizados <= 0) st.classList.add("rojo");
-    else if (t.finalizados === 1) st.classList.add("amarillo");
+    const sem = semaforoMetrica(t);
+    if (sem === "ROJO") st.classList.add("rojo");
+    else if (sem === "AMARILLO") st.classList.add("amarillo");
     else st.classList.add("verde");
 
     document.getElementById("infoCard").classList.remove("hidden-card");
@@ -1450,7 +1815,9 @@ function crearTooltip(t) {{
             <span style="color:#2563EB; font-weight:700;">${{esc(tipoTxt)}}</span><br><br>
             <b>${{t.activos}}</b> personas activas<br>
             <b>${{t.finalizados}}</b> tramites listos<br>
-            <b style="color:${{t.colorSemaforo}};">${{esc(t.semaforo)}}</b>
+            <b>${{t.programa0 || 0}}</b> Programa 0 aceptados<br>
+            <b>${{t.ahorraMas || 0}}</b> Ahorra Mas aceptados<br>
+            <b style="color:${{colorMetrica(t)}};">${{esc(textoSemaforoMetrica(t))}}</b>
         </div>
     `;
 }}
@@ -1461,7 +1828,7 @@ function agregarMarker(t) {{
         radius: esCelular ? 11 : 9,
         color: t.colorRegion,
         weight: 4,
-        fillColor: t.colorSemaforo,
+        fillColor: colorMetrica(t),
         fillOpacity: 0.95,
         opacity: 1
     }});
@@ -1492,7 +1859,7 @@ function setFiltroSemaforo(valor) {{
 function tiendaCoincide(t, region, texto) {{
     const txt = texto.trim().toUpperCase();
     let okRegion = region === "TODAS" || t.region === region;
-    let okSemaforo = filtroSemaforo === "TODOS" || t.semaforoCorto === filtroSemaforo;
+    let okSemaforo = filtroSemaforo === "TODOS" || semaforoMetrica(t) === filtroSemaforo;
     let okTexto = true;
     if (txt.length > 0) {{
         okTexto = String(t.det).toUpperCase().includes(txt) ||
@@ -1505,13 +1872,32 @@ function tiendaCoincide(t, region, texto) {{
     return okRegion && okTexto && okSemaforo;
 }}
 
+function coincideBase(t, region, texto) {{
+    const txt = texto.trim().toUpperCase();
+    let okRegion = region === "TODAS" || t.region === region;
+    let okTexto = true;
+    if (txt.length > 0) {{
+        okTexto = String(t.det).toUpperCase().includes(txt) ||
+                  String(t.detKey || "").toUpperCase().includes(txt) ||
+                  String(t.tienda).toUpperCase().includes(txt) ||
+                  String(t.ciudad).toUpperCase().includes(txt) ||
+                  String(t.estado).toUpperCase().includes(txt) ||
+                  String(t.direccion).toUpperCase().includes(txt);
+    }}
+    return okRegion && okTexto;
+}}
+
 function aplicarFiltros() {{
     const region = document.getElementById("regionSelect").value;
     const texto = document.getElementById("searchInput").value;
     markersLayer.clearLayers();
     markerByDet = {{}};
 
-    const visibles = tiendas.filter(t => tiendaCoincide(t, region, texto));
+    const baseVisibles = tiendas.filter(t => coincideBase(t, region, texto));
+    actualizarResumenMetrica(baseVisibles);
+    actualizarProgresoMetrica();
+
+    const visibles = baseVisibles.filter(t => tiendaCoincide(t, region, texto));
     visibles.forEach(t => agregarMarker(t));
     renderListaTiendas(visibles);
     document.getElementById("countText").textContent = visibles.length;
@@ -1542,7 +1928,9 @@ function renderListaTiendas(lista) {{
         const div = document.createElement("div");
         div.className = "store-card";
         div.style.borderLeftColor = t.colorRegion;
-        const pillClass = t.finalizados === 1 ? "amarillo" : "";
+        const pillClass = semaforoMetrica(t) === "AMARILLO" ? "amarillo" : "";
+        const p0Class = clasePillMetric(t.programa0);
+        const ahorraClass = clasePillMetric(t.ahorraMas);
 
         div.innerHTML = `
             <div class="store-title">${{esc(t.det)}} - ${{esc(t.tienda)}}</div>
@@ -1550,8 +1938,10 @@ function renderListaTiendas(lista) {{
             <div class="pill-row">
                 <span class="pill">${{t.activos}} activos</span>
                 <span class="pill">${{t.finalizados}} listos</span>
-                <span class="pill semaforo ${{pillClass}}" style="background:${{t.colorSemaforo}};">
-                    ${{esc(t.semaforoCorto)}}
+                <span class="pill ${{p0Class}} ${{metricaActiva === "PROGRAMA0" ? "metric-active" : ""}}">P0: ${{t.programa0 || 0}}</span>
+                <span class="pill ${{ahorraClass}} ${{metricaActiva === "AHORRA" ? "metric-active" : ""}}">Ahorra: ${{t.ahorraMas || 0}}</span>
+                <span class="pill semaforo ${{pillClass}}" style="background:${{colorMetrica(t)}}; color:${{(metricaActiva !== "TRAMITES" && valorMetrica(t) === 1) ? "#111827" : "white"}};">
+                    ${{esc(semaforoMetrica(t))}}
                 </span>
             </div>
         `;
@@ -1596,8 +1986,12 @@ function limpiarBusqueda() {{
     document.getElementById("searchInput").value = "";
     document.getElementById("regionSelect").value = "TODAS";
     filtroSemaforo = "TODOS";
+    metricaActiva = "TRAMITES";
     document.querySelectorAll(".btn-filter").forEach(btn => {{
         btn.classList.toggle("active", btn.getAttribute("data-filtro") === "TODOS");
+    }});
+    document.querySelectorAll(".btn-metric").forEach(btn => {{
+        btn.classList.toggle("active", btn.getAttribute("data-metrica") === "TRAMITES");
     }});
     cambiarColorRegion();
     aplicarFiltros();
@@ -1605,6 +1999,8 @@ function limpiarBusqueda() {{
     document.getElementById("infoSubtitle").textContent = "Aqui aparece la informacion de la tienda, direccion y tipo de ubicacion";
     document.getElementById("infoActivos").textContent = "-";
     document.getElementById("infoFinalizados").textContent = "-";
+    document.getElementById("infoPrograma0").textContent = "-";
+    document.getElementById("infoAhorraMas").textContent = "-";
     const st = document.getElementById("infoStatus");
     st.textContent = "Toca una tienda para ver";
     st.className = "status-box rojo";
@@ -1732,9 +2128,35 @@ def main():
     col_direccion_base = buscar_columna(base, ["DIRECCION TIENDA", "DIRECCIÓN TIENDA", "DIRECCION", "DIRECCIÓN", "DOMICILIO", "DOMICILIO TIENDA"], obligatorio=False)
     col_estatus_base = buscar_columna(base, ["ESTATUS"], obligatorio=False)
 
-    col_segundo_lugar = buscar_columna(records, ["Segundo lugar de venta", "Lugar de venta", "DETERMINANTE"])
+    # Records puede traer el dato de tienda en "Segundo lugar de venta" o "Lugar de venta".
+    # Para IKEA, "Segundo lugar de venta" suele venir como '-' y el nombre real viene en "Lugar de venta".
+    col_segundo_lugar = buscar_columna(records, ["Segundo lugar de venta"], obligatorio=False)
+    col_lugar_venta = buscar_columna(records, ["Lugar de venta"], obligatorio=False)
+    col_det_records = buscar_columna(records, ["DETERMINANTE"], obligatorio=False)
+    if not col_segundo_lugar and not col_lugar_venta and not col_det_records:
+        raise ValueError("No encontré columnas de lugar/determinante en Records. Busqué: Segundo lugar de venta, Lugar de venta, DETERMINANTE")
+
     col_estatus_proceso = buscar_columna(records, ["Estatus del proceso"])
     col_folio_records = buscar_columna(records, ["Folio FICO", "FOLIO"], obligatorio=False)
+    col_programa0_records = buscar_columna(records, [
+        "Programa cero aceptado", "Programa 0 aceptado", "PROGRAMA CERO ACEPTADO",
+        "Programa cero", "Programa 0", "CERRÓ P0", "CERRO P0"
+    ], obligatorio=False)
+    col_ahorra_records = buscar_columna(records, [
+        "Complemento dental aceptado", "COMPLEMENTO DENTAL ACEPTADO",
+        "Ahorra mas aceptado", "Ahorra más aceptado", "Ahorra mas", "Ahorra más",
+        "Complemento dental"
+    ], obligatorio=False)
+
+    if not col_programa0_records:
+        print("⚠️ No encontré la columna 'Programa cero aceptado' en Records. PROGRAMA 0 quedará en 0.")
+    else:
+        print(f"Columna PROGRAMA 0 usada: {col_programa0_records}")
+
+    if not col_ahorra_records:
+        print("⚠️ No encontré la columna 'Complemento dental aceptado' en Records. AHORRA MAS quedará en 0.")
+    else:
+        print(f"Columna AHORRA MAS usada: {col_ahorra_records}")
 
     col_det_asis = buscar_columna(asistencia, ["DETERMINANTE"])
     col_nombre_asis = buscar_columna(asistencia, ["NOMBRE COMPLETO", "NOMBRE"])
@@ -1744,9 +2166,9 @@ def main():
     print("\nColumnas detectadas correctamente.")
 
     base = base.copy()
-    base["DET"] = base[col_det_base].apply(extraer_determinante)
+    base["DET"] = base.apply(lambda row: obtener_det_base(row, col_det_base, col_tienda_base), axis=1)
     base["DET_MOSTRAR"] = base[col_det_base].apply(extraer_determinante_mostrar)
-    base.loc[base["DET_MOSTRAR"].astype(str).str.strip() == "", "DET_MOSTRAR"] = base["DET"]
+    base.loc[base["DET_MOSTRAR"].astype(str).str.strip() == "", "DET_MOSTRAR"] = base["DET"].apply(nombre_det_mostrar)
     base["REGION_N"] = base[col_region_base].apply(limpiar_texto_mostrar)
     base["ESTADO_N"] = base[col_estado_base].apply(limpiar_texto_mostrar)
     base["CIUDAD_N"] = base[col_ciudad_base].apply(limpiar_texto_mostrar)
@@ -1775,15 +2197,40 @@ def main():
             print(f"⚠️ No encontré la determinante {det_revision} como OPERANDO en BASE_DE_TIENDAS.xlsx")
 
     records = records.copy()
-    records["DET"] = records[col_segundo_lugar].apply(extraer_determinante)
+    records["DET"] = records.apply(
+        lambda row: obtener_det_records(row, col_segundo_lugar, col_lugar_venta, col_det_records),
+        axis=1
+    )
     records["ESTATUS_PROCESO_N"] = records[col_estatus_proceso].apply(limpiar_texto)
     records_finalizados = records[
         (records["DET"] != "") & (records["ESTATUS_PROCESO_N"].isin(ESTATUS_FINALIZADOS))
     ].copy()
+
+    conteo_ikea = records_finalizados[records_finalizados["DET"].isin(NOMBRES_TIENDAS_ESPECIALES.keys())]["DET"].value_counts()
+    if len(conteo_ikea) > 0:
+        print("\nTrámites FINALIZADOS detectados para IKEA:")
+        for det, total in conteo_ikea.items():
+            print(f" - {nombre_det_mostrar(det)}: {int(total)}")
+
     if col_folio_records:
         finalizados_tienda = records_finalizados.groupby("DET")[col_folio_records].nunique().reset_index(name="FINALIZADOS")
     else:
         finalizados_tienda = records_finalizados.groupby("DET").size().reset_index(name="FINALIZADOS")
+
+    programa0_tienda = contar_aceptados_por_tienda(
+        records_finalizados, col_programa0_records, col_folio_records, "PROGRAMA0_ACEPTADOS"
+    )
+    ahorra_tienda = contar_aceptados_por_tienda(
+        records_finalizados, col_ahorra_records, col_folio_records, "AHORRA_MAS_ACEPTADOS"
+    )
+
+    total_finalizados_dia = int(finalizados_tienda["FINALIZADOS"].sum()) if not finalizados_tienda.empty else 0
+    total_p0_dia = int(programa0_tienda["PROGRAMA0_ACEPTADOS"].sum()) if not programa0_tienda.empty else 0
+    total_ahorra_dia = int(ahorra_tienda["AHORRA_MAS_ACEPTADOS"].sum()) if not ahorra_tienda.empty else 0
+
+    if total_finalizados_dia > 0:
+        print(f"PROGRAMA 0 aceptado: {total_p0_dia}/{total_finalizados_dia} = {(total_p0_dia/total_finalizados_dia)*100:.1f}%")
+        print(f"AHORRA MAS aceptado: {total_ahorra_dia}/{total_finalizados_dia} = {(total_ahorra_dia/total_finalizados_dia)*100:.1f}%")
 
     asistencia = asistencia.copy()
     asistencia["DET"] = asistencia[col_det_asis].apply(extraer_determinante)
@@ -1795,13 +2242,21 @@ def main():
     activos_tienda = asistencia_activos.groupby("DET")[id_persona].nunique().reset_index(name="ACTIVOS")
 
     resumen = base.merge(finalizados_tienda, on="DET", how="left")
+    resumen = resumen.merge(programa0_tienda, on="DET", how="left")
+    resumen = resumen.merge(ahorra_tienda, on="DET", how="left")
     resumen = resumen.merge(activos_tienda, on="DET", how="left")
     resumen["FINALIZADOS"] = resumen["FINALIZADOS"].fillna(0).astype(int)
+    resumen["PROGRAMA0_ACEPTADOS"] = resumen["PROGRAMA0_ACEPTADOS"].fillna(0).astype(int)
+    resumen["AHORRA_MAS_ACEPTADOS"] = resumen["AHORRA_MAS_ACEPTADOS"].fillna(0).astype(int)
     resumen["ACTIVOS"] = resumen["ACTIVOS"].fillna(0).astype(int)
     resumen["COLOR_SEMAFORO"] = resumen["FINALIZADOS"].apply(color_semaforo)
     resumen["SEMAFORO"] = resumen["FINALIZADOS"].apply(texto_semaforo)
     resumen["SEMAFORO_CORTO"] = resumen["FINALIZADOS"].apply(lambda x: "ROJO" if x <= 0 else ("AMARILLO" if x == 1 else "VERDE"))
     resumen["MENSAJE"] = resumen["FINALIZADOS"].apply(mensaje_simple)
+    resumen["COLOR_PROGRAMA0"] = resumen["PROGRAMA0_ACEPTADOS"].apply(color_termometro_especial)
+    resumen["COLOR_AHORRA_MAS"] = resumen["AHORRA_MAS_ACEPTADOS"].apply(color_termometro_especial)
+    resumen["SEMAFORO_PROGRAMA0"] = resumen["PROGRAMA0_ACEPTADOS"].apply(semaforo_termometro_especial)
+    resumen["SEMAFORO_AHORRA_MAS"] = resumen["AHORRA_MAS_ACEPTADOS"].apply(semaforo_termometro_especial)
 
     regiones = sorted(resumen["REGION_N"].dropna().unique(), key=lambda x: str(x))
     color_region = {}
@@ -1834,6 +2289,12 @@ def main():
             "geocodeQuery": str(row.get("GEOCODE_QUERY", "")),
             "activos": int(row["ACTIVOS"]),
             "finalizados": int(row["FINALIZADOS"]),
+            "programa0": int(row.get("PROGRAMA0_ACEPTADOS", 0)),
+            "ahorraMas": int(row.get("AHORRA_MAS_ACEPTADOS", 0)),
+            "colorPrograma0": str(row.get("COLOR_PROGRAMA0", "#111827")),
+            "colorAhorraMas": str(row.get("COLOR_AHORRA_MAS", "#111827")),
+            "semaforoPrograma0": str(row.get("SEMAFORO_PROGRAMA0", "ROJO")),
+            "semaforoAhorraMas": str(row.get("SEMAFORO_AHORRA_MAS", "ROJO")),
             "semaforo": str(row["SEMAFORO"]), "semaforoCorto": str(row["SEMAFORO_CORTO"]),
             "mensaje": str(row["MENSAJE"]), "colorSemaforo": str(row["COLOR_SEMAFORO"]),
             "colorRegion": str(row["COLOR_REGION"]),
@@ -1861,7 +2322,7 @@ def main():
         resumen[[
             "REGION_N", "ESTADO_N", "CIUDAD_N", "DET", "DET_MOSTRAR", "TIENDA_N",
             "DIRECCION_TIENDA_N", "TIPO_UBICACION", "UBICACION_APROXIMADA",
-            "GEOCODE_QUERY", "ACTIVOS", "FINALIZADOS", "SEMAFORO",
+            "GEOCODE_QUERY", "ACTIVOS", "FINALIZADOS", "PROGRAMA0_ACEPTADOS", "AHORRA_MAS_ACEPTADOS", "SEMAFORO",
             "LAT", "LON", "LAT_MAPA", "LON_MAPA"
         ]].sort_values(["REGION_N", "DET"]).to_excel(writer, sheet_name="TIENDAS", index=False)
         resumen_region.to_excel(writer, sheet_name="REGIONES", index=False)
