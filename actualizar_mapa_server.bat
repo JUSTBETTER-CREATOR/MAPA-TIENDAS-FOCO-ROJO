@@ -12,12 +12,18 @@ if not exist backups mkdir backups
 if not exist records_local mkdir records_local
 if not exist salida_local mkdir salida_local
 
+REM Candado para evitar dos ejecuciones al mismo tiempo
+if exist "_MAPA_EN_EJECUCION.lock" (
+    echo Ya hay una actualizacion del mapa corriendo. Se cancela esta ejecucion.
+    echo %date% %time% - Se cancelo porque ya habia otra ejecucion activa. >> logs\mapa_server.log
+    exit /b 0
+)
+
+mkdir "_MAPA_EN_EJECUCION.lock" >nul 2>&1
+
 echo ================================================== >> logs\mapa_server.log
 echo INICIO %date% %time% >> logs\mapa_server.log
 echo Carpeta actual: %cd% >> logs\mapa_server.log
-echo Python usado: >> logs\mapa_server.log
-where python >> logs\mapa_server.log 2>&1
-python --version >> logs\mapa_server.log 2>&1
 
 echo Ejecutando mapa...
 python mapa_invex_github_auto.py >> logs\mapa_server.log 2>&1
@@ -25,14 +31,14 @@ python mapa_invex_github_auto.py >> logs\mapa_server.log 2>&1
 if errorlevel 1 (
     echo ERROR: fallo mapa_invex_github_auto.py. Revisa logs\mapa_server.log
     echo ERROR SCRIPT %date% %time% >> logs\mapa_server.log
-    pause
+    rmdir "_MAPA_EN_EJECUCION.lock" >nul 2>&1
     exit /b 1
 )
 
 if not exist index.html (
     echo ERROR: no se genero index.html.
     echo ERROR SIN INDEX %date% %time% >> logs\mapa_server.log
-    pause
+    rmdir "_MAPA_EN_EJECUCION.lock" >nul 2>&1
     exit /b 1
 )
 
@@ -41,7 +47,7 @@ for %%A in (index.html) do set "SIZE=%%~zA"
 if !SIZE! LSS 50000 (
     echo ERROR: index.html pesa muy poco: !SIZE! bytes. No se subira para evitar mapa en blanco.
     echo ERROR INDEX PEQUENO !SIZE! %date% %time% >> logs\mapa_server.log
-    pause
+    rmdir "_MAPA_EN_EJECUCION.lock" >nul 2>&1
     exit /b 1
 )
 
@@ -61,11 +67,12 @@ git push >> logs\mapa_server.log 2>&1
 if errorlevel 1 (
     echo ERROR: fallo git push. Revisa logs\mapa_server.log
     echo ERROR PUSH %date% %time% >> logs\mapa_server.log
-    pause
+    rmdir "_MAPA_EN_EJECUCION.lock" >nul 2>&1
     exit /b 1
 )
 
 echo FIN OK %date% %time% >> logs\mapa_server.log
 echo LISTO: mapa enviado a GitHub Pages.
-pause
+
+rmdir "_MAPA_EN_EJECUCION.lock" >nul 2>&1
 exit /b 0
